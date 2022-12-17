@@ -1,0 +1,328 @@
+[
+    {
+        "category": "bread",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Orange",
+        "rate": 4,
+        "price": 9.99,
+        "discount": 3,
+        "quantity": 8,
+        "coverImage": "https://i.ibb.co/x158CZ1/2.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "red",
+            "size": "xl"
+        }
+    },
+    {
+        "category": "vegitable",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Carrots",
+        "rate": 5,
+        "price": 5.99,
+        "quantity": 4,
+        "coverImage": "https://i.ibb.co/kDf0VTc/preview2.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "green",
+            "size": "l"
+        }
+    },
+    {
+        "category": "vegitable",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Organic Brocolli",
+        "rate": 5,
+        "price": 29,
+        "quantity": 23,
+        "coverImage": "https://i.ibb.co/XV21Gqh/preview1.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "red",
+            "size": "s"
+        }
+    },
+    {
+        "category": "egg",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Chiken Egg",
+        "rate": 5,
+        "price": 17,
+        "discount": 2,
+        "quantity": 120,
+        "coverImage": "https://i.ibb.co/QQCV9L1/product4.png",
+        "specifications": {
+            "weight": "12pc",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "brown",
+            "size": "m"
+        }
+    },
+    {
+        "category": "vegitable",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Gooseberry",
+        "rate": 5,
+        "price": 17,
+        "quantity": 23,
+        "coverImage": "https://i.ibb.co/ss172Kr/product5.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "green",
+            "size": "m"
+        }
+    },
+    {
+        "category": "bread",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Croissants",
+        "rate": 5,
+        "price": 15,
+        "quantity": 3,
+        "coverImage": "https://i.ibb.co/1v43yL6/product6.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "gray",
+            "size": "l"
+        }
+    },
+    {
+        "category": "egg",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Chiken Egg’s",
+        "rate": 4,
+        "price": 69,
+        "quantity": 15,
+        "coverImage": "https://i.ibb.co/W2xTkFg/product7.png",
+        "specifications": {
+            "weight": "36pc",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "black",
+            "size": "xl"
+        }
+    },
+    {
+        "category": "bread",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fortune Cookies",
+        "rate": 3,
+        "price": 26,
+        "quantity": 15,
+        "coverImage": "https://i.ibb.co/qNZMvT9/product26.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "brown",
+            "size": "s"
+        }
+    },
+    {
+        "category": "vegitable",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Green Cauliflower",
+        "rate": 4,
+        "price": 26,
+        "quantity": 15,
+        "coverImage": "https://i.ibb.co/X3ZnzmJ/product29.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "green",
+            "size": "l"
+        }
+    },
+    {
+        "category": "meat",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Beef",
+        "rate": 4,
+        "price": 12,
+        "quantity": 15,
+        "coverImage": "https://i.ibb.co/WssdJJF/02.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "red",
+            "size": "l"
+        }
+    },
+    {
+        "category": "meat",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Goat meat",
+        "rate": 4,
+        "price": 19,
+        "quantity": 15,
+        "coverImage": "https://i.ibb.co/k2y1RGD/01.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "red",
+            "size": "m"
+        }
+    },
+    {
+        "category": "meat",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Chiken",
+        "rate": 4,
+        "price": 10,
+        "quantity": 15,
+        "coverImage": "https://i.ibb.co/q9xFmrh/03.png",
+        "specifications": {
+            "weight": "2kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "white",
+            "size": "l"
+        }
+    },
+    {
+        "category": "fruits",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Lichi",
+        "rate": 4,
+        "price": 45,
+        "discount": 5,
+        "quantity": 10,
+        "coverImage": "https://i.ibb.co/8P95Tqv/product25.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "red",
+            "size": "l"
+        }
+    },
+    {
+        "category": "fruits",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Orange",
+        "rate": 14,
+        "price": 6.99,
+        "quantity": 4,
+        "coverImage": "https://i.ibb.co/fFsrVZb/product8.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "orange",
+            "size": "m"
+        }
+    },
+    {
+        "category": "fruits",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Banana",
+        "rate": 4,
+        "price": 3.99,
+        "quantity": 20,
+        "coverImage": "https://i.ibb.co/ZN9mfJR/5.png",
+        "specifications": {
+            "weight": "24pc",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "yellow",
+            "size": "l"
+        }
+    },
+    {
+        "category": "fruits",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Grape",
+        "rate": 4,
+        "price": 6.99,
+        "quantity": 9,
+        "coverImage": "https://i.ibb.co/Yy2c8YL/product22.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "red",
+            "size": "s"
+        }
+    },
+    {
+        "category": "vegitable",
+        "shortDescription": "Your first step to sustainable living is going zero waste and what better way to start then starting at home",
+        "fullDescription": "Last but not least, we couldn’t write a post on blogs to follow on sustainable living without mentioning our very own blog, The Organic society. Our mission is to inspire families to eat well, do good and live better. Our blog covers all things organic, from food to farming, health and wellness to fashion and beauty.",
+        "name": "Fresh Tomato",
+        "rate": 4,
+        "price": 1.99,
+        "quantity": 9,
+        "coverImage": "https://i.ibb.co/J2KyLTJ/product31.png",
+        "specifications": {
+            "weight": "1kg",
+            "dimensions": {
+                "long": 30,
+                "height": 10
+            },
+            "color": "yellow",
+            "size": "m"
+        }
+    }
+]

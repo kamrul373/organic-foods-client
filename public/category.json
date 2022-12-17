@@ -1,17 +1,22 @@
 [
     {
-        "category": "meat"
+        "category": "meat",
+        "cat_id": 1
     },
     {
-        "category": "fruits"
+        "category": "fruits",
+        "cat_id": 2
     },
     {
-        "category": "bread"
+        "category": "bread",
+        "cat_id": 3
     },
     {
-        "category": "vegitable"
+        "category": "vegitable",
+        "cat_id": 4
     },
     {
-        "category": "egg"
+        "category": "egg",
+        "cat_id": 5
     }
 ]

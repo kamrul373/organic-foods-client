@@ -2,7 +2,9 @@ import React from 'react';
 
 const SmallLoading = () => {
     return (
-        <button className="btn loading bg-primary">loading</button>
+        <div className='flex justify-center items-center min-h-screen'>
+            <button className="btn loading bg-primary">Loading</button>
+        </div>
     );
 };
 

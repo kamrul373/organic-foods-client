@@ -1,5 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Reveal from 'react-reveal/Reveal';
+import { CartContext } from '../../App';
+import { toast } from 'react-hot-toast';
+import { addProductToLocal } from '../../Utility/addProductToLocal';
+
 type productProps = {
     product: {
         _id: string,
@@ -25,10 +29,15 @@ type productProps = {
     }
 }
 const ProductCard = ({ product }: productProps) => {
-
+    const { cart, setCart } = useContext(CartContext)
+    const handleCart = (id: string, name: string) => {
+        setCart(cart + 1);
+        addProductToLocal(id);
+        toast.success(`${name} added`)
+    }
     return (
-        <Reveal effect="fadeInUp" duration={1500}>
-            <div className="card w-96 bg-base-100 shadow-xl">
+        <Reveal effect="fadeInUp" duration={1200}>
+            <div className="card lg:w-96 w-full bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={product.coverImage} alt={product.name} className="h-48" />
                 </figure>
@@ -37,7 +46,7 @@ const ProductCard = ({ product }: productProps) => {
                     <p className='lg:text-justify my-3'>{product.shortDescription}</p>
                     <p className='font-bold lg:text-3xl text-2xl'>${product.price}</p>
                     <div className="card-actions mt-4">
-                        <button className="btn btn-primary btn-wide text-white cursor-pointer hover:bg-secondary duration-500 border-none">Buy Now</button>
+                        <button onClick={() => handleCart(product._id, product.name)} className="btn btn-primary btn-wide text-white cursor-pointer hover:bg-secondary duration-500 border-none">Buy Now</button>
                     </div>
                 </div>
             </div>

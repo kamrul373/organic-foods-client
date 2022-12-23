@@ -18,10 +18,10 @@ const Products = () => {
     }
 
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto '>
             <h2 className='lg:text-5xl text-3xl font-bold text-center mt-16'>Top Rated Organic Foods</h2>
 
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-8 my-12 '>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-8 my-12 px-6 '>
 
                 {
                     products.map((product: any) =>

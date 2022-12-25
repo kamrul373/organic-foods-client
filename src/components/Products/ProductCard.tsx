@@ -35,6 +35,7 @@ const ProductCard = ({ product }: productProps) => {
         addProductToLocal(id);
         toast.success(`${name} added`)
     }
+
     return (
         <Reveal effect="fadeInUp" duration={1200}>
             <div className="card lg:w-96 w-full bg-base-100 shadow-xl">

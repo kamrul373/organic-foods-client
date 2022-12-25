@@ -1,7 +1,6 @@
 export const addProductToLocal = (id: string) => {
     let shoppingCart;
     shoppingCart = localStorage.getItem("organio-cart");
-    console.log(typeof shoppingCart)
 
     // checking if shopping cart exists or not
     if (shoppingCart) {

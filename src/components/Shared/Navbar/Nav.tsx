@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom"
 import { BsBagDash } from "react-icons/bs";
 import { CartContext } from '../../../App';
+import { useGetCurrentCartQuntity } from '../../../Utility/useGetCurrentCartQuantity';
 
 const Nav = () => {
+    useGetCurrentCartQuntity();
     const { cart } = useContext(CartContext)
     return (
         <ul className="menu lg:menu-horizontal">

@@ -104,7 +104,7 @@ const Cart = () => {
                         </tr>
                         <tr className='h-10 lg:text-right text-center'>
                             <td colSpan={5}>
-                                <Link to="/checkout" className='btn btn-primary text-white btn-wide mt-10 lg:mt-5'>Checkout</Link>
+                                <Link to="/checkout" className='btn btn-primary text-white btn-wide mt-8 lg:mt-5'>Checkout</Link>
                             </td>
 
                         </tr>

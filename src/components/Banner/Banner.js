@@ -18,6 +18,7 @@ import img2 from "../../assets/images/hero-slider/one/2.png"
 
 
 import PrimaryButton from "../Shared/Buttons/PrimaryButton";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -41,7 +42,9 @@ const Banner = () => {
                         <div className="flex-1 lg:pl-16 animate__animated animate__fadeInUp animate__slower">
                             <h2 className="lg:text-6xl text-2xl font-bold my-6">Organic Foods & Vegetables</h2>
                             <p className="my-6">25 Years of experience in agriculture farming</p>
-                            <PrimaryButton text={"Shop Now"}></PrimaryButton>
+                            <Link to="/shop">
+                                <PrimaryButton text={"Shop Now"}></PrimaryButton>
+                            </Link>
                         </div>
                         <div className="animate__animated animate__fadeInUp animate__slower"  >
                             <img src={img1} alt="vegitable" />
@@ -56,7 +59,9 @@ const Banner = () => {
                         <div className="flex-1 lg:pl-16 wow animate__animated animate__fadeInUp  animate__slower" data-wow-duration="2s" data-wow-delay=".3s">
                             <h2 className="lg:text-6xl text-2xl font-bold my-6">Organic Foods & Vegetables</h2>
                             <p className="my-6">25 Years of experience in agriculture farming</p>
-                            <PrimaryButton text={"Shop Now"}></PrimaryButton>
+                            <Link to="/shop">
+                                <PrimaryButton text={"Shop Now"}></PrimaryButton>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>

@@ -3,6 +3,8 @@ import Main from "../Layout/Main"
 import Home from "../pages/Home/Home/Home"
 import Cart from "../pages/Cart/Cart"
 import Checkout from "../pages/Checkout/Checkout"
+import Shop from "../pages/Shop/Shop"
+import SingleProductDetails from "../pages/SingleProductDetails/SingleProductDetails"
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -23,6 +25,15 @@ export const router = createBrowserRouter([
             {
                 path: "/checkout",
                 element: <Checkout></Checkout>
+            },
+            {
+                path: "/shop",
+                element: <Shop></Shop>
+            },
+            {
+                path: "/shop/:id",
+
+                element: <SingleProductDetails></SingleProductDetails>
             }
         ]
     }

@@ -10,8 +10,8 @@ const Nav = () => {
     return (
         <ul className="menu lg:menu-horizontal">
             {/* <!-- Navbar menu content here --> */}
-            <li><Link to="/">Navbar Item 1</Link></li>
-            <li><Link to="/">Navbar Item 2</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/shop">Shop</Link></li>
             <Link to="/cart" className=" hidden lg:block ">
                 <div className='flex items-center justify-center btn btn-ghost btn-circle'>
                     <div className="indicator ">

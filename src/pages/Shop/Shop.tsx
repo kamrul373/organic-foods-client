@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import SmallLoading from '../Shared/Loading/SmallLoading';
-import ProductCard from './ProductCard';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import SmallLoading from '../../components/Shared/Loading/SmallLoading';
+import ProductCard from '../../components/Products/ProductCard';
 
-const Products = () => {
+const Shop = () => {
     const { data: products, isLoading } = useQuery({
         queryKey: ["allproducts"],
         queryFn: async () => {
-            const res = await fetch(`${process.env.REACT_APP_HOST}/products?limit=6`)
+            const res = await fetch(`${process.env.REACT_APP_HOST}/products?`)
             const data = res.json();
             return data;
         }
@@ -19,9 +18,8 @@ const Products = () => {
     }
 
     return (
-        <div className='mx-auto '>
-            <h2 className='lg:text-5xl text-3xl font-bold text-center mt-16'>Top Rated Organic Foods</h2>
-
+        <div className='my-8 lg:px-16 px-4'>
+            <h2 className='text-3xl text-center font-bold my-5'>Shop</h2>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-8 my-12 px-6 '>
 
                 {
@@ -33,12 +31,8 @@ const Products = () => {
                     )
                 }
             </div>
-            <div className='text-center my-8'>
-                <Link to="/shop" className='btn btn-secondary btn-wide text-white cursor-pointer hover:bg-primary duration-500 border-none'>Load More</Link>
-            </div>
         </div>
-
     );
 };
 
-export default Products;
+export default Shop;

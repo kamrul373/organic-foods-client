@@ -38,7 +38,7 @@ const ProductCard = ({ product }: productProps) => {
 
     return (
         <Reveal effect="fadeInUp" duration={1200}>
-            <div className="card lg:w-96 w-full bg-base-100 shadow-xl">
+            <div className="card lg:w-96 lg:h-[530px] w-full bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={product.coverImage} alt={product.name} className="h-48" />
                 </figure>
@@ -47,7 +47,7 @@ const ProductCard = ({ product }: productProps) => {
                     <p className='lg:text-justify my-3'>{product.shortDescription}</p>
                     <p className='font-bold lg:text-3xl text-2xl'>${product.price}</p>
                     <div className="card-actions mt-4">
-                        <button onClick={() => handleCart(product._id, product.name)} className="btn btn-primary btn-wide text-white cursor-pointer hover:bg-secondary duration-500 border-none">Buy Now</button>
+                        <button onClick={() => handleCart(product._id, product.name)} className="btn btn-primary btn-wide text-white cursor-pointer hover:bg-secondary duration-500 border-none">Add to cart</button>
                     </div>
                 </div>
             </div>

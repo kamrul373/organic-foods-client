@@ -1,4 +1,4 @@
-export const addProductToLocal = (id: string) => {
+export const addProductToLocal = (id: string, qty: number = 1) => {
     let shoppingCart;
     shoppingCart = localStorage.getItem("organio-cart");
 
@@ -11,7 +11,7 @@ export const addProductToLocal = (id: string) => {
     // defining quantity
     let quantity: number;
     if (id in shoppingCart) {
-        quantity = shoppingCart[id] + 1;
+        quantity = shoppingCart[id] + qty;
     } else {
         quantity = 1;
     }

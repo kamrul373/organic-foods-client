@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Rater from 'react-rater';
+import 'react-rater/lib/react-rater.css';
+import "./SingleProductDetails.css";
+import { CartContext } from '../../App';
+import { addProductToLocal } from '../../Utility/addProductToLocal';
+import { toast } from 'react-hot-toast';
 type singleProductLoaderType = {
     "_id": string,
     "category": string,
@@ -25,6 +31,17 @@ type singleProductLoaderType = {
 const SingleProductDetails = () => {
     const singleProductData: singleProductLoaderType = useLoaderData() as singleProductLoaderType;
 
+    const { cart, setCart } = useContext(CartContext)
+    const handleCart = (e: any) => {
+        e.preventDefault();
+        const quantity = parseInt(e.target.quantity.value)
+
+        setCart(cart + quantity);
+
+        addProductToLocal(singleProductData._id, quantity);
+        toast.success(`${quantity} ${singleProductData.name} added`)
+    }
+
     return (
         <div className='lg:px-16 px-4 my-8'>
             <div className='flex lg:flex-row flex-col-reverse justify-start lg:gap-8'>
@@ -36,12 +53,22 @@ const SingleProductDetails = () => {
                         {singleProductData.fullDescription}
                     </p>
                 </div>
-                <div className='lg:text-left text-center'>
-                    <h2 className='lg:text-5xl text-3xl font-bold  lg:mt-16 lg:my-6 my-4'>{singleProductData.name}</h2>
-                    <h3 className='font-bold text-3xl'>${singleProductData.price}</h3>
-                    <div className='py-4'>
-                        <p>Category: <span className='capitalize'>{singleProductData.category}</span></p>
-                        <p>Ratting : {singleProductData.rate} </p>
+                <div className='lg:text-left text-center lg:mt-8'>
+                    <h2 className=' text-3xl font-bold'>{singleProductData.name}</h2>
+                    <Rater rating={singleProductData.rate} interactive={false} />
+                    <h3 className='font-bold text-3xl my-2'>${singleProductData.price}</h3>
+
+                    <div className='py-2'>
+                        <form onSubmit={handleCart}>
+                            <div>
+                                <p className='py-2'>Qty </p>
+                                <input type="number" name="quantity" id="" min="1" max="100" defaultValue={1} className="pl-3" />
+                            </div>
+                            <div className='mt-4'>
+                                <button type='submit' className="btn btn-primary text-white cursor-pointer hover:bg-secondary duration-500 border-none">Add to cart</button>
+                            </div>
+                        </form>
+                        <p className='mt-2'>Category: <span className='capitalize'>{singleProductData.category}</span></p>
                     </div>
                 </div>
             </div>

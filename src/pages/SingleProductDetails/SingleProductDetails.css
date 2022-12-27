@@ -1,0 +1,8 @@
+.react-rater-star.is-disabled.is-active,
+.react-rater-star.is-disabled.is-disabled {
+    font-size: 28px;
+}
+
+.react-rater-star.is-disabled.is-active {
+    color: #76A713;
+}

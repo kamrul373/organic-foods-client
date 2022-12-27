@@ -38,91 +38,100 @@ const Checkout = () => {
     return (
         <div className='my-8 lg:px-16 px-4'>
             <h2 className='text-3xl font-bold my-5'>Checkout</h2>
-            <div className='flex lg:flex-row flex-col justify-between gap-8'>
-                <table className='table w-full'>
-                    <thead>
-                        <th>Name</th>
-                        <th>Sub Total</th>
-                    </thead>
-                    <tbody>
-                        {
-                            allCartproducts.map((product: checkoutProductType) => <>
+            {
+                shoppingCart !== "{}" ?
+                    <div className='flex lg:flex-row flex-col justify-between gap-8'>
+                        <table className='table w-full'>
+                            <thead>
                                 <tr>
-                                    <td>
-                                        <p className='font-bold'>{product.name} * {product.carQuantity}</p>
-                                    </td>
-                                    <td>
-                                        <p>{product.price * product.carQuantity}</p>
-                                    </td>
+                                    <th>Name</th>
+                                    <th>Sub Total</th>
                                 </tr>
-                            </>)
-                        }
+                            </thead>
+                            <tbody>
+                                {
+                                    allCartproducts.map((product: checkoutProductType) =>
+                                        <tr key={product._id}>
+                                            <td>
+                                                <p className='font-bold'>{product.name} * {product.carQuantity}</p>
+                                            </td>
+                                            <td>
+                                                <p>{product.price * product.carQuantity}</p>
+                                            </td>
+                                        </tr>
+                                    )
+                                }
 
-                        <tr className='h-10'>
-                            <td>
-                                <p className='font-bold lg:text-xl'>Total Sub Total</p>
-                            </td>
-                            <td >
-                                <p className='lg:text-xl font-bold'>{total > 0 ? total : calculatedtotal}</p>
-                            </td>
+                                <tr className='h-10'>
+                                    <td>
+                                        <p className='font-bold lg:text-xl'>Total Sub Total</p>
+                                    </td>
+                                    <td >
+                                        <p className='lg:text-xl font-bold'>{total > 0 ? total : calculatedtotal}</p>
+                                    </td>
 
-                        </tr>
-                        <tr className='h-10'>
+                                </tr>
+                                <tr className='h-10'>
 
-                            <td >
-                                <p className='font-bold lg:text-xl'>Delivery Charge</p>
-                            </td>
-                            <td >
-                                <p className='lg:text-xl font-bold'>{
-                                    deliveryCharge
-                                }</p>
-                            </td>
+                                    <td >
+                                        <p className='font-bold lg:text-xl'>Delivery Charge</p>
+                                    </td>
+                                    <td >
+                                        <p className='lg:text-xl font-bold'>{
+                                            deliveryCharge
+                                        }</p>
+                                    </td>
 
-                        </tr>
-                        <tr className='h-10'>
+                                </tr>
+                                <tr className='h-10'>
 
-                            <td >
-                                <p className='font-bold lg:text-xl'>Total</p>
-                            </td>
-                            <td >
-                                <p className='lg:text-xl font-bold'>{(calculatedtotal + deliveryCharge).toFixed(2)}.</p>
-                            </td>
+                                    <td >
+                                        <p className='font-bold lg:text-xl'>Total</p>
+                                    </td>
+                                    <td >
+                                        <p className='lg:text-xl font-bold'>{(calculatedtotal + deliveryCharge).toFixed(2)}.</p>
+                                    </td>
 
-                        </tr>
+                                </tr>
 
-                    </tbody>
+                            </tbody>
 
-                </table>
-                <div className='w-[40%]'>
-                    <form >
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <input type="text" placeholder="Your Name" className="input input-bordered input-primary w-full " name="name" required />
+                        </table>
+                        <div className='lg:w-[40%]'>
+                            <form >
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Name</span>
+                                    </label>
+                                    <input type="text" placeholder="Your Name" className="input input-bordered input-primary w-full " name="name" required />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
+                                    </label>
+                                    <input type="email" placeholder="Your Email" className="input input-bordered input-primary w-full " name="email" required />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Phone Number</span>
+                                    </label>
+                                    <input type="text" placeholder="Your Phone" className="input input-bordered input-primary w-full " name="phone" required />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Address</span>
+                                    </label>
+                                    <textarea className="textarea textarea-primary" placeholder="Address" name="address" required></textarea>
+                                </div>
+                                <button type='submit' className='btn btn-primary text-white w-full mt-8 lg:mt-5'>Pay Now</button>
+                            </form>
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="email" placeholder="Your Email" className="input input-bordered input-primary w-full " name="email" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Phone Number</span>
-                            </label>
-                            <input type="text" placeholder="Your Phone" className="input input-bordered input-primary w-full " name="phone" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Address</span>
-                            </label>
-                            <textarea className="textarea textarea-primary" placeholder="Address" name="address" required></textarea>
-                        </div>
-                        <button type='submit' className='btn btn-primary text-white w-full mt-8 lg:mt-5'>Pay Now</button>
-                    </form>
-                </div>
-            </div>
+                    </div>
+                    : <div className='text-left'>
+                        <Link to="/shop" className='btn btn-primary text-white  mt-8 lg:mt-5'>Return To Shop</Link>
+                    </div>
+            }
+
         </div>
     );
 };

@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/shop/:id",
-
+                loader: async ({ params }) => fetch(`${process.env.REACT_APP_HOST}/products/${params.id}`),
                 element: <SingleProductDetails></SingleProductDetails>
             }
         ]

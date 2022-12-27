@@ -1,0 +1,8 @@
+.single-product .card-title {
+    transition: color linear 0.5s;
+}
+
+.single-product:hover .card-title {
+    color: #76A713;
+    transition: color linear 0.5s;
+}

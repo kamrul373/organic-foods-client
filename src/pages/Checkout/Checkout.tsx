@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getCartProducts } from '../../Utility/getCartProducts';
 import calculateTotal from '../../Utility/calculateTotal';
 import { Link } from 'react-router-dom';
+import Payment from '../../components/Payment/Payment';
 
 // type
 type checkoutProductType = {
@@ -35,6 +36,14 @@ const Checkout = () => {
     if (shoppingCart) {
         calculatedtotal = calculateTotal(allCartproducts);
     }
+    const cartInfo = {
+        subTotal: total > 0 ? total : calculatedtotal,
+        total: parseFloat((calculatedtotal + deliveryCharge).toFixed(2)),
+        deliveryCharge: deliveryCharge,
+
+    }
+    const productInfo: any[] = []
+    //console.log(cartInfo);
     return (
         <div className='my-8 lg:px-16 px-4'>
             <h2 className='text-3xl font-bold my-5'>Checkout</h2>
@@ -58,7 +67,13 @@ const Checkout = () => {
                                             <td>
                                                 <p>{product.price * product.carQuantity}</p>
                                             </td>
+                                            <td className='hidden'>
+                                                {
+                                                    productInfo.push({ _id: product._id, quantity: product.carQuantity, price: product.price })
+                                                }
+                                            </td>
                                         </tr>
+
                                     )
                                 }
 
@@ -98,33 +113,11 @@ const Checkout = () => {
 
                         </table>
                         <div className='lg:w-[40%]'>
-                            <form >
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Name</span>
-                                    </label>
-                                    <input type="text" placeholder="Your Name" className="input input-bordered input-primary w-full " name="name" required />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Email</span>
-                                    </label>
-                                    <input type="email" placeholder="Your Email" className="input input-bordered input-primary w-full " name="email" required />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Phone Number</span>
-                                    </label>
-                                    <input type="text" placeholder="Your Phone" className="input input-bordered input-primary w-full " name="phone" required />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Address</span>
-                                    </label>
-                                    <textarea className="textarea textarea-primary" placeholder="Address" name="address" required></textarea>
-                                </div>
-                                <button type='submit' className='btn btn-primary text-white w-full mt-8 lg:mt-5'>Pay Now</button>
-                            </form>
+
+
+                            <Payment productInfo={productInfo} cartInfo={cartInfo}></Payment>
+
+
                         </div>
                     </div>
                     : <div className='text-left'>

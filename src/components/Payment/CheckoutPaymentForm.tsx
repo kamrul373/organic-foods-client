@@ -1,21 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     CardElement,
     useStripe,
     useElements,
 } from '@stripe/react-stripe-js';
+import { toast } from 'react-hot-toast';
 type orderDataType = {
-    orderData: {}
+    orderData: {
+        productInfo: {
+            _id: string,
+            quantity: number,
+            price: number
+        },
+        cartInfo: {
+            total: number,
+            subTotal: number,
+            deliveryCharge: number,
+        }
+    }
 }
 
+type paymentIntentType = {
+    id: string,
+    status: string
+}
 
 const CheckoutPaymentForm = ({ orderData }: orderDataType) => {
     const stripe = useStripe();
     const elements = useElements();
+    const [clientSecret, setClientSecret] = useState("");
+    const [transactionId, setTransactionId] = useState("");
+    const [error, setError] = useState<string | undefined | null>("");
+    const [processing, setProcessing] = useState(false)
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_HOST}/create-payment-intent`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(orderData.cartInfo)
+        })
+            .then(res => res.json())
+            .then(data => setClientSecret(data.clientSecret))
+    }, [orderData.cartInfo])
 
     const handleSubmit = async (event: any) => {
         // Block native form submission.
         event.preventDefault();
+
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const address = form.address.value;
+
+        console.log(name, email, phone, address)
 
         if (!stripe || !elements) {
             // Stripe.js has not loaded yet. Make sure to disable
@@ -39,10 +78,58 @@ const CheckoutPaymentForm = ({ orderData }: orderDataType) => {
         });
 
         if (error) {
-            console.log('[error]', error);
+            setError(error.message);
         } else {
-            console.log('[PaymentMethod]', paymentMethod);
+            setError("");
         }
+        if (!clientSecret) {
+            return;
+        }
+        setProcessing(true)
+        const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: name,
+                        email: email,
+                        address: address,
+                        phone: phone,
+                    },
+                },
+            },
+        );
+
+        if (paymentIntent?.status === "succeeded") {
+            const paymentData = {
+                transanction_id: paymentIntent.id,
+                productInfo: orderData.productInfo,
+                price: orderData.cartInfo,
+            }
+            console.log(paymentData);
+            fetch(`${process.env.REACT_APP_HOST}/payments`, {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                    authorization: `Bearer ${localStorage.getItem("organio-token")}`
+                },
+                body: JSON.stringify(paymentData)
+            })
+                .then(response => response.json)
+                .then(data => {
+                    toast.success("You paid successfully!")
+                    setTransactionId(paymentIntent.id)
+                    console.log(data);
+                })
+        }
+        if (confirmError) {
+            return setError(confirmError.message)
+        } else {
+            setError("");
+        }
+        console.log("payment intent", paymentIntent)
+        setProcessing(false)
     };
 
     return (

@@ -113,11 +113,7 @@ const Checkout = () => {
 
                         </table>
                         <div className='lg:w-[40%]'>
-
-
                             <Payment productInfo={productInfo} cartInfo={cartInfo}></Payment>
-
-
                         </div>
                     </div>
                     : <div className='text-left'>

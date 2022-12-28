@@ -6,6 +6,7 @@ import "./SingleProductDetails.css";
 import { CartContext } from '../../App';
 import { addProductToLocal } from '../../Utility/addProductToLocal';
 import { toast } from 'react-hot-toast';
+import ReviewForm from '../../components/ReviewForm/ReviewForm';
 type singleProductLoaderType = {
     "_id": string,
     "category": string,
@@ -72,8 +73,8 @@ const SingleProductDetails = () => {
                 </div>
             </div>
             <div className='overflow-x-auto mt-10 pl-4'>
-                <table className='table md:w-[60%]'>
-                    <caption className='text-2xl font-semibold my-4 text-left'>Product Details</caption>
+                <table className='table md:w-[100%]'>
+                    <caption className='text-2xl font-semibold my-4 text-left'>Product Specification</caption>
                     <thead>
                         <tr>
                             <th>Specification</th>
@@ -124,6 +125,10 @@ const SingleProductDetails = () => {
                     <p className='text-justify'>
                         {singleProductData.fullDescription}
                     </p>
+                </div>
+                <div className='md:w-[60%]'>
+                    <h2 className='text-2xl font-semibold my-4'>Post Your Review </h2>
+                    <ReviewForm></ReviewForm>
                 </div>
             </div>
         </div>

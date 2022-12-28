@@ -1,0 +1,9 @@
+.react-rater-star {
+    font-size: 28px;
+}
+
+.react-rater-star:hover,
+.react-rater-star.will-be-active,
+.react-rater-star.is-active {
+    color: #76A713;
+}
